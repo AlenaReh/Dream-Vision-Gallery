@@ -13,7 +13,13 @@ import img12 from '../img/img12.jpg';
 import img13 from '../img/img13.jpg';
 import img14 from '../img/img14.jpg';
 import img15 from '../img/img15.jpg';
-
+import img16 from '../img/img16.jpg';
+import img17 from '../img/img17.jpg';
+import img18 from '../img/img18.jpg';
+import img20 from '../img/img20.jpg';
+import img23 from '../img/img23.jpg';
+import img25 from '../img/img25.jpg';
+import img27 from '../img/img27.jpg';
 
 const Gallery = () => {
     let data = [
@@ -74,6 +80,34 @@ const Gallery = () => {
         {
             id: 15,
             imgSrc: img15,
+        },
+        {
+            id: 16,
+            imgSrc: img16,
+        },
+        {
+            id: 17,
+            imgSrc: img17,
+        },
+        {
+            id: 18,
+            imgSrc: img18,
+        },
+        {
+            id: 20,
+            imgSrc: img20,
+        },
+        {
+            id: 23,
+            imgSrc: img23,
+        },
+        {
+            id: 25,
+            imgSrc: img25,
+        },
+        {
+            id: 27,
+            imgSrc: img27,
         }
     ];
 
