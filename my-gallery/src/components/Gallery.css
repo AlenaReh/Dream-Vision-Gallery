@@ -1,0 +1,18 @@
+body{
+    background-color: rgb(45, 48, 5);
+    color: rgb(245, 231, 151);
+    font-family: 'Rock Salt', cursive;
+}
+.welcome{
+    text-align: center;
+}
+.gallery{
+    column-width: 33%;
+    column-count: 3;
+    padding: 10px;
+}
+.gallery .img{
+    transition: all 350ms ease;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
