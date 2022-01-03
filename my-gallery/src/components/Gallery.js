@@ -8,6 +8,12 @@ import img6 from '../img/img6.jpg';
 import img8 from '../img/img8.jpg';
 import img9 from '../img/img9.jpg';
 import img10 from '../img/img10.jpg';
+import img11 from '../img/img11.jpg';
+import img12 from '../img/img12.jpg';
+import img13 from '../img/img13.jpg';
+import img14 from '../img/img14.jpg';
+import img15 from '../img/img15.jpg';
+
 
 const Gallery = () => {
     let data = [
@@ -44,6 +50,30 @@ const Gallery = () => {
         {
             id: 10,
             imgSrc: img10,
+        },
+        {
+            id: 10,
+            imgSrc: img10,
+        },
+        {
+            id: 11,
+            imgSrc: img11,
+        },
+        {
+            id: 12,
+            imgSrc: img12,
+        },
+        {
+            id: 13,
+            imgSrc: img13,
+        },
+        {
+            id: 14,
+            imgSrc: img14,
+        },
+        {
+            id: 15,
+            imgSrc: img15,
         }
     ];
 
