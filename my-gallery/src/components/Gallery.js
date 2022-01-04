@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Gallery.css';
 import img1 from '../img/img1.jpg';
 import img3 from '../img/img3.jpg';
@@ -111,13 +111,26 @@ const Gallery = () => {
         }
     ];
 
+    const [picked, setPicked] = useState(false);
+    const [tempImgSrc, setTempImgSrc] = useState('');
+
+    const getImg = (imgSrc) => {
+        // console.log(imgSrc);
+        setTempImgSrc(imgSrc);
+        setPicked(true);
+    }
     return(
         <>
         <h2 className='welcome'>Welcome to my gallery</h2>
+
+        <div className={picked ? "picked open" : "picked"}>
+            <img src={tempImgSrc} alt=""/>
+        </div>
+
         <div className='gallery'>
             {data.map((item, index) => {
                 return(
-                    <div className='img' key={index}>
+                    <div className='img' key={index} onClick={() => getImg(item.imgSrc)}>
                         <img src={item.imgSrc} alt="" style={{width: '100%'}}/>
                     </div>
                 )
