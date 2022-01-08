@@ -54,7 +54,16 @@ body {
     margin: 0;
     padding: 0;
 }
-
+.picked.open svg{
+    position: fixed;
+    cursor: pointer;
+    color: rgb(245, 231, 151);
+    top: 5px;
+    right: 5px;
+    width: 4rem;
+    height: 4rem;
+    padding: 5px;
+}
 
 /* Mobile responsiveness */
 @media screen and (max-width: 375px) {
@@ -67,4 +76,17 @@ body {
   .welcome {
     font-size: smaller;
   }
+  .picked.open svg{
+    width: 3rem;
+    height: 3rem;
+    padding: 10px;
+  }
+  .picked img{
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
 }

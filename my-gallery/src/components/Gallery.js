@@ -20,6 +20,8 @@ import img20 from '../img/img20.jpg';
 import img23 from '../img/img23.jpg';
 import img25 from '../img/img25.jpg';
 import img27 from '../img/img27.jpg';
+import { FaWindowClose } from "react-icons/fa";
+
 
 const Gallery = () => {
     let data = [
@@ -52,10 +54,6 @@ const Gallery = () => {
         {
             id: 9,
             imgSrc: img9,
-        },
-        {
-            id: 10,
-            imgSrc: img10,
         },
         {
             id: 10,
@@ -125,6 +123,9 @@ const Gallery = () => {
 
         <div className={picked ? "picked open" : "picked"}>
             <img src={tempImgSrc} alt=""/>
+            < FaWindowClose onClick={() => setPicked(false)} />
+
+        
         </div>
 
         <div className='gallery'>
