@@ -28,117 +28,177 @@ const Gallery = () => {
         {
             id: 1,
             imgSrc: img1,
+            title: "Fishing"
         },
-
         {
             id: 3,
             imgSrc: img3,
+            title: "Summer"
+
         },
         {
             id: 4,
             imgSrc: img4,
+            title: "Making Friends"
+
         },
         {
             id: 5,
             imgSrc: img5,
+            title: "Carefree"
+
         },
         {
             id: 6,
             imgSrc: img6,
+            title: "Ladybug"
+
         },
 
         {
             id: 8,
             imgSrc: img8,
+            title: "Maze Runner"
         },
         {
             id: 9,
             imgSrc: img9,
+            title: "Pumpkins"
         },
         {
             id: 10,
             imgSrc: img10,
+            title: "Happy Halloween"
         },
         {
             id: 11,
             imgSrc: img11,
+            title: "Freedom"
         },
         {
             id: 12,
             imgSrc: img12,
+            title: "Fluff"
         },
         {
             id: 13,
             imgSrc: img13,
+            title: "Foragescape Farm"
         },
         {
             id: 14,
             imgSrc: img14,
+            title: "I spy..."
         },
         {
             id: 15,
             imgSrc: img15,
+            title: "Bee of Mine"
         },
         {
             id: 16,
             imgSrc: img16,
+            title: "Friendship"
         },
         {
             id: 17,
             imgSrc: img17,
+            title: "Magic of Books"
         },
         {
             id: 18,
             imgSrc: img18,
+            title: "Happy Holidays"
         },
         {
             id: 20,
             imgSrc: img20,
+            title: "Two Sweet"
         },
         {
             id: 23,
             imgSrc: img23,
+            title: "Oblivion"
         },
         {
             id: 25,
             imgSrc: img25,
+            title: "Moss"
         },
         {
             id: 27,
             imgSrc: img27,
+            title: "Girls and Curls"
         }
     ];
 
-    const [picked, setPicked] = useState(false);
+    const [photo, setPhoto] = useState(false);
     const [tempImgSrc, setTempImgSrc] = useState('');
-
+    const [title, setTitle] = useState('');
+    // const [selected, setSelected] = useState('');
     const getImg = (imgSrc) => {
         // console.log(imgSrc);
         setTempImgSrc(imgSrc);
-        setPicked(true);
+        setPhoto(true);
+        setTitle(title);
     }
-    return(
-        <>
-        <h2 className='welcome'>Welcome to my gallery</h2>
+    // const [rating, setRating] = useState();
 
-        <div className={picked ? "picked open" : "picked"}>
-            <img src={tempImgSrc} alt=""/>
-            < FaWindowClose onClick={() => setPicked(false)} />
+    return (
+      <>
+        <h2 className="welcome">
+          “A good snapshot keeps a moment that's gone from running away.”
+        </h2>
+        <p className="quote">– Eudora Welty</p>
 
-        
-        </div>
+        <div className={photo ? "photo open" : "photo"}>
+          <FaWindowClose onClick={() => setPhoto(false)} />
 
-        <div className='gallery'>
+          <img src={tempImgSrc} alt="" />
+
+            {data.map((item) => {
+              return (
+                <p className="title" key={item.id}>
+                  {item.title}
+                </p>
+              );
+            })}
+
+
+          {/* <div>{data[selected] && data[selected].title}</div>
             {data.map((item, index) => {
-                return(
-                    <div className='img' key={index} onClick={() => getImg(item.imgSrc)}>
-                        <img src={item.imgSrc} alt="" style={{width: '100%'}}/>
-                    </div>
+                return (
+                    <>
+                    <p 
+                    className={index === selected ? "selected" : ""} 
+                    key={`${index}${item.title}`}
+                    onClick={() => setSelected(index)}
+                    ></p>
+                    </>
                 )
             })}
+          </div> */}
         </div>
-        </>
-    )
+
+        <div className="gallery">
+          {data.map((item) => {
+            return (
+              <div
+                className="img"
+                key={item.id}
+                onClick={() => getImg(item.imgSrc)}
+              >
+                <img
+                  src={item.imgSrc}
+                  alt={item.title}
+                  style={{ width: "100%" }}
+                />
+              </div>
+            );
+          })}
+        </div>
+      </>
+    );
 }
 
 export default Gallery;
