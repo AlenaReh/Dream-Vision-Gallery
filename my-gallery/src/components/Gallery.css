@@ -28,7 +28,7 @@ body {
   position: fixed;
   bottom: 5px;
   width: 15rem;
-  left: 30rem;
+  text-align: center;
 }
 
 /* picked photo styling */
