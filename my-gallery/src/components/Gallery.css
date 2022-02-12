@@ -76,6 +76,10 @@ body {
     padding: 5px;
 }
 
+.star{
+  left: 20rem;
+}
+
 /* Mobile responsiveness */
 @media screen and (max-width: 375px) {
   .gallery {
