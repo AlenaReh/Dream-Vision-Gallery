@@ -27,12 +27,13 @@ function Star({ selected = false, onSelect }) {
   return (
     <FaStar
       className="star"
-      color={selected ? "red" : "gray"}
+      color={selected ? "gold" : "gray"}
       onClick={onSelect}
     />
   );
 }
-function StarRating({ totalStars = 5 }) {
+
+function StarRating({ totalStars = 5}) {
   const [selectedStars, setSelectedStars] = useState(0);
   return (
     <>
@@ -43,7 +44,7 @@ function StarRating({ totalStars = 5 }) {
           onSelect={() => setSelectedStars(i + 1)}
         />
       ))}
-      {/* <p>{selectedStars} of {totalStars}</p> */}
+      {/* <p className="starsSelected">{selectedStars} of {totalStars}</p> */}
     </>
   );
 }
@@ -156,14 +157,12 @@ const Gallery = () => {
   const [photo, setPhoto] = useState(false);
   const [tempImgSrc, setTempImgSrc] = useState("");
   const [title, setTitle] = useState('');
-  // const [selected, setSelected] = useState('');
+
   const getImg = (imgSrc, title) => {
-    // console.log(imgSrc);
     setTempImgSrc(imgSrc);
     setPhoto(true);
     setTitle(title);
   };
-
 
   return (
     <>
@@ -173,20 +172,20 @@ const Gallery = () => {
       <p className="quote">– Eudora Welty</p>
 
       <div className={photo ? "photo open" : "photo"}>
-
         <FaWindowClose onClick={() => setPhoto(false)} />
-        <img src={tempImgSrc} title={data.title} alt="" />
 
+        <img src={tempImgSrc} title={data.title} alt="" />
         {data.map((item) => {
           return (
-            <p onChange={() => setTitle(title)}className="title" key={item.id}>
+            <p onChange={() => setTitle(title)} className="title" key={item.id}>
               {title}
             </p>
-          );
+          )
         })}
 
-        <StarRating totalStars={4} className="star"/>;
+      {/* <StarRating/>; */}
       </div>
+
 
       <div className="gallery">
         {data.map((item) => {
@@ -201,6 +200,10 @@ const Gallery = () => {
                 alt={item.title}
                 style={{ width: "100%" }}
               />
+
+
+              <StarRating className="star"/>
+
             </div>
           );
         })}
