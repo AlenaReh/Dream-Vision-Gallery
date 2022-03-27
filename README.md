@@ -2,6 +2,8 @@
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
+You can view [deployed project here](https://dream-vision-gallery.herokuapp.com/)
+
 
 ## Description 
 This is a gallery of some of my favorite photos.
